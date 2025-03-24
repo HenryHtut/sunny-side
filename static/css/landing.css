@@ -160,6 +160,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
 }
 
 .buddy-section h2 {

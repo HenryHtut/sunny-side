@@ -21,7 +21,7 @@ body {
 
 .logo {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .nav-icons {
@@ -29,13 +29,9 @@ body {
     gap: 10px;
 }
 
-.nav-icons div {
-    width: 30px;
-    height: 30px;
-    background-color: #E0E0E0; /* Gray placeholder for icons */
-    border-radius: 5px;
+.social-icon img {
+    width: clamp(20px, 4vw, 30px);
 }
-
 /* Main Content */
 .container {
     padding: 20px;
