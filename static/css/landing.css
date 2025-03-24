@@ -170,47 +170,55 @@ body {
     margin-bottom: 40px;
 }
 
-.buddy-boxes {
+
+.buddy-slider {
     position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: clamp(200px, 50vw, 400px);
+    width: 600px; 
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.buddy-boxes {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
+    transition: transform 0.5s ease; /* Smooth sliding animation */
 }
 
 .buddy-card {
-    position: absolute;
-    width: clamp(200px, 60vw, 350px);
-    height: clamp(200px, 50vw, 400px);
+    flex: 0 0 250px; /* Fixed width for each card */
+    height: 400px;
+    min-width: 80px;
     background-color: #CFD8DC;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    transition: transform 0.6s ease;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-right: 20px; /* Gap between cards */
+}
+.buddy-card:last-child {
+    margin-right: 0;
 }
 
-.buddy-card.active {
-    transform: translateZ(0) scale(1);
-    z-index: 10;
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-
-.buddy-card.prev {
-    transform: translateX(-200px) translateY(0px) scale(0.5);
-    z-index: 5;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #E0E0E0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.buddy-card.next {
-    transform: translateX(200px) translateY(0px) scale(0.5);
-    z-index: 5;
+.dot.active {
+    background-color: #FFC107; /* Yellow to match the theme */
 }
 
 
