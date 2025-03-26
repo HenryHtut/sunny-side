@@ -29,7 +29,7 @@
              <a href="https://t.me/conceptians_library" target="_blank" class="social-icon"> 
                 <img src="{% static 'images/telegram.svg' %}" alt="Telegram">
             </a>
-            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
+            <a href="https://www.youtube.com/" target="_blank" class="social-icon">
                 <img src="{% static 'images/Platform=Facebook, Color=Original.svg' %}" alt="Facebook">
             </a>
 
@@ -111,7 +111,9 @@
                 <span class="dot" data-index="1"></span>
                 <span class="dot" data-index="2"></span>
                 <span class="dot" data-index="3"></span>
+                
             </div>
+            
         </div>
         </div>
     </div>
@@ -121,74 +123,60 @@
     <div class="footer">
         
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.querySelector('.buddy-boxes');
-            const cards = document.querySelectorAll('.buddy-card');
-            const dots = document.querySelectorAll('.dot');
-            const totalCards = cards.length / 2; // Since we duplicated cards for looping
-            const cardWidth = 70; // Width of card (50px) + margin-right (20px)
-            const visibleCards = 3; // Number of cards visible at once
-            let currentIndex = 0;
-            let autoSlideInterval;
+    const slider = document.querySelector('.buddy-boxes');
+    const cards = document.querySelectorAll('.buddy-card');
+    const dots = document.querySelectorAll('.dot');
+    const totalCards = cards.length; // Total number of cards
+    const cardWidth = 400 + 20; // Width of card (400px) + margin-right (20px)
+    let currentIndex = 0;
+    let autoSlideInterval;
 
-            // Function to update the slider position and dots
-            function updateSlider(index) {
-                slider.style.transition = 'transform 0.5s ease';
-                slider.style.transform = `translateX(-${index * cardWidth}px)`;
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-                currentIndex = index;
-            }
-
-            // Seamless looping
-            function handleLoop() {
-                if (currentIndex >= totalCards) {
-                    currentIndex = 0;
-                    slider.style.transition = 'none';
-                    slider.style.transform = `translateX(0px)`;
-                    // Force reflow to restart animation
-                    void slider.offsetWidth;
-                } else if (currentIndex < 0) {
-                    currentIndex = totalCards - 1;
-                    slider.style.transition = 'none';
-                    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-                    // Force reflow to restart animation
-                    void slider.offsetWidth;
-                }
-            }
-
-            // Auto-slide function
-            function startAutoSlide() {
-                autoSlideInterval = setInterval(() => {
-                    currentIndex++;
-                    updateSlider(currentIndex);
-                    handleLoop();
-                }, 3000); // Slide every 3 seconds
-            }
-
-            // Stop auto-slide on hover
-            document.querySelector('.buddy-slider').addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-
-            // Resume auto-slide when not hovering
-            document.querySelector('.buddy-slider').addEventListener('mouseleave', startAutoSlide);
-
-            // Dot navigation
-            dots.forEach(dot => {
-                dot.addEventListener('click', () => {
-                    const index = parseInt(dot.getAttribute('data-index'));
-                    updateSlider(index);
-                });
-            });
-
-            // Initialize the first slide and start auto-slide
-            updateSlider(0);
-            startAutoSlide();
+    // Function to update the slider position and dots
+    function updateSlider(index) {
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(-${index * cardWidth}px)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
         });
+        currentIndex = index;
+    }
+
+    // Auto-slide function
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= totalCards) {
+                currentIndex = 0;
+            }
+            updateSlider(currentIndex);
+        }, 3000); // Slide every 3 seconds
+    }
+
+    // Stop auto-slide on hover
+    document.querySelector('.buddy-slider').addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+
+    // Resume auto-slide when not hovering
+    document.querySelector('.buddy-slider').addEventListener('mouseleave', startAutoSlide);
+
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = parseInt(dot.getAttribute('data-index'));
+            updateSlider(index);
+        });
+    });
+
+    // Initialize the first slide and start auto-slide
+    updateSlider(0);
+    startAutoSlide();
+});
+
+
+  
     </script>
     
      </body>

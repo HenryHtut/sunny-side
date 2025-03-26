@@ -170,10 +170,9 @@ body {
     margin-bottom: 40px;
 }
 
-
 .buddy-slider {
     position: relative;
-    width: 600px; 
+    width: 400px; /* Set to match the card width */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -184,9 +183,8 @@ body {
 }
 
 .buddy-card {
-    flex: 0 0 250px; /* Fixed width for each card */
+    flex: 0 0 400px; /* Ensure each card takes up 400px width */
     height: 400px;
-    min-width: 80px;
     background-color: #CFD8DC;
     border-radius: 5px;
     display: flex;
@@ -197,6 +195,7 @@ body {
     font-weight: 700;
     margin-right: 20px; /* Gap between cards */
 }
+
 .buddy-card:last-child {
     margin-right: 0;
 }
@@ -214,7 +213,7 @@ body {
     background-color: #E0E0E0;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 }
 
 .dot.active {
