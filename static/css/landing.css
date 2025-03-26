@@ -246,13 +246,7 @@ body {
         max-width: 100%;
     }
 
-    .buddy-card.prev {
-        transform: translateX(clamp(-150px, -30vw, -100px)) scale(0.7);
-    }
-
-    .buddy-card.next {
-        transform: translateX(clamp(100px, 30vw, 150px)) scale(0.7);
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -270,13 +264,4 @@ body {
         height: clamp(120px, 35vw, 300px);
     }
 
-    .buddy-card.prev {
-        transform: translateX(clamp(-100px, -25vw, -80px)) scale(0.6);
-        opacity: 0.8;
-    }
-
-    .buddy-card.next {
-        transform: translateX(clamp(80px, 25vw, 100px)) scale(0.6);
-        opacity: 0.8;
-    }
 }
