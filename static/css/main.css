@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: #FFC107; /* Yellow background */
+    background-color: #FFC107; 
     color: #333;
 }
 
-/* Header */
+
 .header {
-    background-color: #FFF8E1; /* Light yellow header background */
+    background-color: #FFF8E1; 
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -32,16 +32,16 @@ body {
 .social-icon img {
     width: clamp(20px, 4vw, 30px);
 }
-/* Main Content */
+
 .container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Country Section */
+
 .country-section {
-    background-color: #FFF8E1; /* Light yellow section background */
+    background-color: #FFF8E1; 
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -66,20 +66,20 @@ body {
 }
 
 .tab-minimum {
-    background-color: #B0BEC5; /* Gray for Minimum Requirements */
+    background-color: #B0BEC5; 
 }
 
 .tab-stats {
-    background-color: #FFCA28; /* Yellow for Top University Stats */
+    background-color: #FFCA28; 
 }
 
 .content-box {
-    background-color: #FFFDE7; /* Very light yellow for content area */
-    height: 200px; /* Placeholder height */
+    background-color: #FFFDE7; 
+    height: 200px; 
     border-radius: 5px;
 }
 
-/* Popular Universities Section */
+
 .universities-section {
     background-color: #FFF8E1;
     padding: 20px;
@@ -92,12 +92,12 @@ body {
 }
 
 .universities-box {
-    background-color: #CFD8DC; /* Gray placeholder for universities */
-    height: 300px; /* Placeholder height */
+    background-color: #CFD8DC; 
+    height: 300px; 
     border-radius: 5px;
 }
 
-/* Footer */
+
 .footer {
     padding: 20px;
     text-align: center;
@@ -105,7 +105,7 @@ body {
     color: #666;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .header {
         padding: 10px;

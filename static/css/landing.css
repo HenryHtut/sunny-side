@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+
 .header {
     background-color: #FFF8E1;
     padding: 10px 20px;
@@ -35,7 +35,7 @@ body {
     width: clamp(20px, 4vw, 30px);
 }
 
-/* Container */
+
 .container {
     padding: 20px;
     margin: 0 auto;
@@ -43,7 +43,7 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
+
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -116,7 +116,7 @@ body {
     height: auto;
 }
 
-/* Sunny Side Section */
+
 .sunny-side-section {
     padding: 40px 20px;
     text-align: center;
@@ -151,7 +151,7 @@ body {
     border-radius: 10px;
 }
 
-/* Buddy Section */
+
 .buddy-section {
     padding: 40px 20px;
     background-color: aliceblue;
@@ -172,18 +172,18 @@ body {
 
 .buddy-slider {
     position: relative;
-    width: 400px; /* Set to match the card width */
+    width: 400px; 
     margin: 0 auto;
     overflow: hidden;
 }
 
 .buddy-boxes {
     display: flex;
-    transition: transform 0.5s ease; /* Smooth sliding animation */
+    transition: transform 0.5s ease; 
 }
 
 .buddy-card {
-    flex: 0 0 400px; /* Ensure each card takes up 400px width */
+    flex: 0 0 400px; 
     height: 400px;
     background-color: #CFD8DC;
     border-radius: 5px;
@@ -193,7 +193,7 @@ body {
     font-size: 1.5rem;
     color: #333;
     font-weight: 700;
-    margin-right: 20px; /* Gap between cards */
+    margin-right: 20px; 
 }
 
 .buddy-card:last-child {
@@ -221,7 +221,7 @@ body {
 }
 
 
-/* Footer */
+
 .footer {
     background-color: #FFF8E1;
     padding: 20px;
@@ -229,7 +229,7 @@ body {
     font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
     .dropdowns {
         flex-direction: column;
