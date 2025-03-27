@@ -247,11 +247,16 @@ body {
 
     
 }
-
 @media (max-width: 480px) {
     .header {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .buddy-card {
+        width: 90%;
+        height: auto;
+        font-size: 1rem;
     }
 
     .buddy-boxes {
@@ -262,5 +267,4 @@ body {
         width: clamp(120px, 45vw, 250px);
         height: clamp(120px, 35vw, 300px);
     }
-
 }
